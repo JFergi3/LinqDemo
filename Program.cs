@@ -120,5 +120,5 @@ Console.Clear();
 //     Console.WriteLine($"[1.19d] {name}");
 // } // Donkey Kong, Mario
 
-
+Console.WriteLine($"[1.19e] {characters.Count(c => c.YearCreated == 1981 && c.Series.Contains("Donkey Kong"))}"); // 3
 
