@@ -111,5 +111,12 @@ Console.Clear();
 //    Console.WriteLine($"[1.19b] {character.Name} - {character.Series}");
 // } // Donkey Kong, Pauline, Mario
 
-Console.WriteLine($"[1.19c] {characters.Count(c => c.YearCreated == 1981 && c.Series.Contains("Mario"))}"); // 2
+// Console.WriteLine($"[1.19c] {characters.Count(c => c.YearCreated == 1981 && c.Series.Contains("Mario"))}"); // 2
+
+foreach (string? name in characters
+    .Where(c => c.YearCreated == 1981 && c.Series.Contains("Mario"))
+    .Select(c => c.Name))
+{
+    Console.WriteLine($"[1.19d] {name}");
+}
 
