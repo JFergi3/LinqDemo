@@ -101,4 +101,13 @@ Console.Clear();
 //     Console.WriteLine($"\t{character.Name}");
 //   }
 // }
-Console.WriteLine($"[1.19a] {characters.Count(c => c.YearCreated == 1981)}"); // 3
+
+// ----------------------------Assignment--------------------------------------------
+
+// Console.WriteLine($"[1.19a] {characters.Count(c => c.YearCreated == 1981)}"); // 3
+
+foreach (var character in characters.Where(c => c.YearCreated == 1981).Select(c => new { c.Name, c.Series }))
+{
+    Console.WriteLine($"[1.19b] {character.Name} - {character.Series}");
+} // Donkey Kong, Pauline, Mario
+
