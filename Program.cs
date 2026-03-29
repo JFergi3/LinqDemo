@@ -101,3 +101,4 @@ Console.Clear();
 //     Console.WriteLine($"\t{character.Name}");
 //   }
 // }
+Console.WriteLine($"[1.19a] {characters.Count(c => c.YearCreated == 1981)}"); // 3
