@@ -162,7 +162,11 @@ Console.Clear();
 
 // Console.WriteLine($"[1.21h] {characters.Count(c => c.Alias.Count == 0 && c.Series.Contains("Donkey Kong"))}"); // 33
 
-foreach (var character in characters .Where(c => c.Alias.Count == 0 && c.Series.Contains("Donkey Kong")) .Select(c => new {c.Name, c.Alias }))
-{
-    Console.WriteLine($"[1.21i] {character.Name} - {String.Join(", ", character.Alias)}");
-}
+// foreach (var character in characters .Where(c => c.Alias.Count == 0 && c.Series.Contains("Donkey Kong")) .Select(c => new {c.Name, c.Alias }))
+// {
+//     Console.WriteLine($"[1.21i] {character.Name} - {String.Join(", ", character.Alias)}");
+// }
+
+// -----------------------1.22
+
+Console.WriteLine($"[1.22a] {characters.Any(c => c.Alias.Any(a => a == "Snowmad King"))}"); // True
