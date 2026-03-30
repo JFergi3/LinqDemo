@@ -131,5 +131,5 @@ Console.Clear();
 
 //--------------------------1.20
 
-
+Console.WriteLine($"[1.20a] {characters.Count(c => c.FirstAppearance == "Donkey Kong 64")}"); // 9 
 
