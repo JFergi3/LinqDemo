@@ -206,5 +206,9 @@ Console.Clear();
 //     Console.WriteLine($"[1.25d] {name}");
 // }
 
-Console.WriteLine($"[1.25e] {characters.Count(c => c.Series.Contains("Mario") && c.Species != "Human" && c.Species != "Koopa")}"); // 4
+// Console.WriteLine($"[1.25e] {characters.Count(c => c.Series.Contains("Mario") && c.Species != "Human" && c.Species != "Koopa")}"); // 4
 
+foreach (var character in characters .Where(c => c.Series.Contains("Mario") && c.Species != "Human" && c.Species != "Koopa").Select(c => new {c.Name, c.Species }))
+{
+    Console.WriteLine($"[1.25f] {character.Name} - {character.Species}");
+}
