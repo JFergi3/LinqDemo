@@ -185,7 +185,11 @@ Console.Clear();
 
 // Console.WriteLine($"[1.24a] {characters.Count(c => c.Species == "Kremling")}"); // 7
 
-foreach (string? name in characters .Where(c => c.Species == "Kremling").Select(c => c.Name))
-{
-    Console.WriteLine($"[1.24b] {name}");
-}
+// foreach (string? name in characters .Where(c => c.Species == "Kremling").Select(c => c.Name))
+// {
+//     Console.WriteLine($"[1.24b] {name}");
+// }
+
+//-------------------------------1.25
+
+Console.WriteLine($"[1.25a] {characters.Count(c => c.Series.Contains("Mario") && c.Species == "Human")}"); // 7
