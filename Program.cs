@@ -176,5 +176,9 @@ Console.Clear();
 //     Console.WriteLine($"[1.22b] {character.Name} - {String.Join(", ", character.Alias)}"); // Lord Fredrik - Snowmad King
 // }
 
-Console.WriteLine($"[1.23a] {characters.Any(c => c.Alias.Any(a => a == "Winter Kong"))}"); // False
+// Console.WriteLine($"[1.23a] {characters.Any(c => c.Alias.Any(a => a == "Winter Kong"))}"); // False
 
+foreach (var character in characters .Where(c => c.Alias.Any(a => a == "Winter Kong")).Select(c => new {c.Name, c.Alias }))
+{
+    Console.WriteLine($"[1.23b] {character.Name} - {String.Join(", ", character.Alias)}"); 
+}
