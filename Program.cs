@@ -144,8 +144,12 @@ Console.Clear();
 
 // Console.WriteLine($"[1.21b] {characters.Count(c => c.Alias.Count == 0)}"); // 37
 
-foreach (var character in characters .Where(c => c.Alias.Count == 0) .Select(c => new { c.Name, c.Alias, c.Series }))
-{
-    Console.WriteLine($"[1.21c] {character.Name} - {String.Join(", ", character.Alias)} - {character.Series}");
-}
+// foreach (var character in characters .Where(c => c.Alias.Count == 0) .Select(c => new { c.Name, c.Alias, c.Series }))
+// {
+//     Console.WriteLine($"[1.21c] {character.Name} - {String.Join(", ", character.Alias)} - {character.Series}");
+// }
+
+Console.WriteLine($"[1.21d] {characters.Any(c => c.Alias.Count == 0 && c.Series.Contains("Mario"))}"); // True
+
+
 
