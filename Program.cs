@@ -149,7 +149,10 @@ Console.Clear();
 //     Console.WriteLine($"[1.21c] {character.Name} - {String.Join(", ", character.Alias)} - {character.Series}");
 // }
 
-Console.WriteLine($"[1.21d] {characters.Any(c => c.Alias.Count == 0 && c.Series.Contains("Mario"))}"); // True
+// Console.WriteLine($"[1.21d] {characters.Any(c => c.Alias.Count == 0 && c.Series.Contains("Mario"))}"); // True
+
+Console.WriteLine($"[1.21e] {characters.Count(c => c.Alias.Count == 0 && c.Series.Contains("Mario"))}"); // 5
+
 
 
 
