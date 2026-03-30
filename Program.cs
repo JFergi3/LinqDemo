@@ -158,5 +158,6 @@ Console.Clear();
 //     Console.WriteLine($"[1.21f] {character.Name} - {String.Join(", ", character.Alias)}");
 // } // Diddy Kong, Toad, Wario, Waluigi, Rosalina
 
-Console.WriteLine($"[1.21g] {characters.Any(c => c.Alias.Count == 0 && c.Series.Contains("Donkey Kong"))}"); // True
+// Console.WriteLine($"[1.21g] {characters.Any(c => c.Alias.Count == 0 && c.Series.Contains("Donkey Kong"))}"); // True
 
+Console.WriteLine($"[1.21h] {characters.Count(c => c.Alias.Count == 0 && c.Series.Contains("Donkey Kong"))}"); // 33
