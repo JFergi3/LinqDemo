@@ -138,5 +138,9 @@ Console.Clear();
 //     Console.WriteLine($"[1.20b] {name}");
 // } // Tiny Kong, Chunky Kong, Manky Kong, Lanky Kong, Banana Fairy Queen, K. Lumsy, Snide, Scoff, Mad Jack 
 
-Console.WriteLine($"[1.21a] {characters.Any(c => c.Alias.Count == 0 || c.Alias == null)} "); // True
+//--------------------------1.21
+
+// Console.WriteLine($"[1.21a] {characters.Any(c => c.Alias.Count == 0 || c.Alias == null)} "); // True
+
+Console.WriteLine($"[1.21b] {characters.Count(c => c.Alias.Count == 0)}"); // 37
 
