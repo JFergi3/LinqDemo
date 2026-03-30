@@ -131,5 +131,10 @@ Console.Clear();
 
 //--------------------------1.20
 
-Console.WriteLine($"[1.20a] {characters.Count(c => c.FirstAppearance == "Donkey Kong 64")}"); // 9 
+// Console.WriteLine($"[1.20a] {characters.Count(c => c.FirstAppearance == "Donkey Kong 64")}"); // 9 
+
+foreach (string? name in characters .Where(c => c.FirstAppearance == "Donkey Kong 64").Select(c => c.Name))
+{
+    Console.WriteLine($"[1.20b] {name}");
+} // Tiny Kong, Chunky Kong, Manky Kong, Lanky Kong, Banana Fairy Queen, K. Lumsy, Snide, Scoff, Mad Jack 
 
